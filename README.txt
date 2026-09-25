@@ -1,14 +1,14 @@
-TEST VISUEL — grande capture de la boutique Vinted
+CORRECTIF SUPABASE URL
 
-À remplacer dans GitHub :
-- app/page.js
-- app/admin/page.js
-- app/style.css
-- public/vinted-boutique.jpg
+Le problème venait d'un décalage de nom de variable :
+- Vercel contient SUPABASE_URL
+- la V2 cherchait NEXT_PUBLIC_SUPABASE_URL
 
-Important :
-L'image fournie dans ce ZIP est uniquement une image de démonstration pour voir la présentation.
-Si la présentation te plaît, il suffira ensuite de remplacer public/vinted-boutique.jpg
-par une vraie capture d'écran de la boutique Vinted.
+Ce correctif accepte désormais SUPABASE_URL (et garde aussi la compatibilité avec l'ancien nom).
 
-Aucune synchronisation Vinted n'est utilisée dans cette version.
+Remplacer dans GitHub :
+- app/api/upload/route.js
+- lib/supabase.js
+
+Aucune variable Vercel à modifier.
+Après le déploiement automatique, retester l'import d'une image.

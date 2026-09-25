@@ -1,0 +1,1 @@
+export async function POST(){return Response.json({ok:false,message:'Vinted n’autorise pas actuellement la création de la capture depuis le serveur. Le dernier aperçu est conservé. Vous pouvez importer une capture depuis votre téléphone.'},{status:200})}

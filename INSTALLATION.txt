@@ -1,0 +1,18 @@
+BOUTCHOU BABIoles — installation Supabase
+
+1. Remplacer le projet GitHub par les fichiers de ce ZIP (ou ajouter/remplacer les mêmes chemins).
+2. Dans Supabase > SQL Editor, coller puis exécuter supabase-setup.sql.
+3. Dans Supabase > Project Settings > API, récupérer :
+   - Project URL
+   - service_role key (SECRET : ne jamais la mettre dans GitHub ni la partager)
+4. Dans Vercel > projet > Settings > Environment Variables, créer :
+   NEXT_PUBLIC_SUPABASE_URL = Project URL
+   SUPABASE_SERVICE_ROLE_KEY = service_role key
+   Les appliquer à Production, Preview et Development si souhaité.
+5. Redéployer le projet dans Vercel.
+6. Ouvrir /admin. Vous pourrez importer logo, captures téléphone/ordinateur, image À propos, image de partage et modifier les textes/réseaux sociaux.
+
+IMPORTANT
+- L'administration n'est PAS encore protégée par mot de passe : c'est prévu à l'étape suivante avec Supabase Auth.
+- Le bouton « Actualiser l'aperçu Vinted » conserve volontairement la dernière image si Vinted refuse l'accès. L'import manuel depuis le téléphone fonctionne indépendamment.
+- Les images sont enregistrées dans Supabase Storage, donc elles restent après les redéploiements Vercel.

@@ -1,26 +1,3 @@
-export default function Home(){
-  const shop='https://www.vinted.fr/member/267314251';
-  return <main>
-    <section className="hero"><div>
-      <span className="pill">Bébés & enfants</span>
-      <h1>De jolies trouvailles pour les petits 💛</h1>
-      <p>Découvrez Boutchou Babioles et retrouvez les articles disponibles directement sur Vinted.</p>
-      <a className="button" href={shop} target="_blank" rel="noreferrer">Voir la boutique Vinted</a>
-    </div></section>
-
-    <section className="shopShowcase">
-      <div className="heading">
-        <div><small>NOTRE BOUTIQUE</small><h2>Nos articles sur Vinted</h2></div>
-      </div>
-      <p className="shopIntro">Un aperçu de la boutique Boutchou Babioles. Pour connaître les prix et les disponibilités à jour, ouvrez directement la boutique Vinted.</p>
-      <a className="shopCapture" href={shop} target="_blank" rel="noreferrer" aria-label="Ouvrir la boutique Boutchou Babioles sur Vinted">
-        <img src="/vinted-boutique.jpg" alt="Aperçu de la boutique Vinted Boutchou Babioles"/>
-        <span className="captureCta">Voir les articles sur Vinted →</span>
-      </a>
-      <div className="shopActions">
-        <a className="button" href={shop} target="_blank" rel="noreferrer">Voir tous les articles et disponibilités</a>
-      </div>
-      <p className="captureNote">Les prix et disponibilités peuvent évoluer sur Vinted.</p>
-    </section>
-  </main>
-}
+import {getSettings} from '../lib/supabase';
+export const dynamic='force-dynamic';
+export default async function Home(){const s=await getSettings();const socials=[['Instagram',s.instagram_url,s.instagram_enabled],['TikTok',s.tiktok_url,s.tiktok_enabled],['Facebook',s.facebook_url,s.facebook_enabled],['Pinterest',s.pinterest_url,s.pinterest_enabled],['YouTube',s.youtube_url,s.youtube_enabled]].filter(x=>x[1]&&x[2]);return <main><section className="hero"><div><span className="pill">Bébés & enfants</span><h1>{s.hero_title}</h1><p>{s.hero_text}</p><a className="button" href={s.vinted_url} target="_blank">Voir la boutique Vinted</a></div></section><section className="shopShowcase"><div className="heading"><div><small>NOTRE BOUTIQUE</small><h2>{s.shop_title}</h2></div></div><p className="shopIntro">{s.shop_text}</p>{s.preview_mobile_url?<a className="shopCapture" href={s.vinted_url} target="_blank"><picture>{s.desktop_separate&&s.preview_desktop_url&&<source media="(min-width: 800px)" srcSet={s.preview_desktop_url}/>}<img src={s.preview_mobile_url} alt="Aperçu de la boutique Vinted"/></picture><span className="captureCta">Voir les articles sur Vinted →</span></a>:<div className="emptyPreview">Ajoutez une capture de la boutique depuis l’administration.</div>}<div className="shopActions"><a className="button" href={s.vinted_url} target="_blank">Voir tous les articles et disponibilités</a></div>{socials.length>0&&<div className="socials">{socials.map(x=><a key={x[0]} href={x[1]} target="_blank">{x[0]}</a>)}</div>}</section></main>}

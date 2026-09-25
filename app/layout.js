@@ -1,3 +1,3 @@
-import './style.css';
-export const metadata={title:'Boutchou Babioles',description:'Jeux éducatifs, éveil et accessoires pour bébés & enfants',manifest:'/manifest.webmanifest'};
-export default function Layout({children}){return <html lang="fr"><body><header><a className="brand" href="/">Boutchou<span>Babioles</span></a><nav><a href="/">Boutique</a><a href="/admin">Administration</a></nav></header>{children}<footer>Boutchou Babioles · Retrouvez nos articles sur Vinted</footer></body></html>}
+import './style.css';import {getSettings} from '../lib/supabase';
+export async function generateMetadata(){const s=await getSettings();const image=s.social_image_url||s.logo_url||undefined;return {title:'Boutchou Babioles',description:s.hero_text,manifest:'/manifest.webmanifest',icons:s.logo_url?{icon:s.logo_url}:undefined,openGraph:{title:'Boutchou Babioles',description:s.hero_text,images:image?[image]:[]}}}
+export default async function Layout({children}){const s=await getSettings();return <html lang="fr"><body><header><a className="brand" href="/">{s.logo_url&&<img src={s.logo_url} alt=""/>}<span className="brandname">Boutchou<span>Babioles</span></span></a><nav><a href="/">Boutique</a><a href="/about">À propos</a><a href="/admin">Administration</a></nav></header>{children}<footer>Boutchou Babioles · Retrouvez nos articles sur Vinted</footer></body></html>}

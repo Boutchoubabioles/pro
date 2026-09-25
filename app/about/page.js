@@ -1,0 +1,2 @@
+import {getSettings} from '../../lib/supabase';export const dynamic='force-dynamic';
+export default async function About(){const s=await getSettings();return <main className="about"><div>{s.about_image_url&&<img src={s.about_image_url} alt="Boutchou Babioles"/>}<section><small>NOTRE HISTOIRE</small><h1>{s.about_title}</h1><p>{s.about_text}</p><a className="button" href={s.vinted_url} target="_blank">Découvrir notre Vinted</a></section></div></main>}

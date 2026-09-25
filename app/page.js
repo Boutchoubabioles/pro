@@ -1,3 +1,26 @@
-import products from '../data/products.json';
-const formatPrice=v=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?new Intl.NumberFormat('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n):v};
-export default function Home(){const p=[...products].sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)));return <main><section className="hero"><div><span className="pill">Bébés & enfants</span><h1>De jolies trouvailles pour les petits 💛</h1><p>Découvrez la sélection Boutchou Babioles. Cliquez sur un article pour le retrouver sur Vinted.</p><a className="button" href="https://www.vinted.fr/member/267314251">Voir la boutique Vinted</a></div></section><section className="catalog"><div className="heading"><div><small>NOTRE SÉLECTION</small><h2>Les articles</h2></div><span>{p.length} articles</span></div><div className="grid">{p.map((x,i)=><a className="card" key={x.id} href={x.vinted_url&&x.vinted_url.includes('/items/')?x.vinted_url:`https://www.vinted.fr/items/${x.id}`} target="_blank" rel="noreferrer"><div className="photo">{i<8&&<b>Nouveau</b>}<img src={x.image} alt=""/></div><div className="info"><strong>{x.brand||x.title}</strong>{x.brand&&<div className="title">{x.title}</div>}<div className="meta">{[x.size,x.condition].filter(Boolean).join(' · ')}</div><div className="price">{formatPrice(x.price)} €</div></div></a>)}</div></section></main>}
+export default function Home(){
+  const shop='https://www.vinted.fr/member/267314251';
+  return <main>
+    <section className="hero"><div>
+      <span className="pill">Bébés & enfants</span>
+      <h1>De jolies trouvailles pour les petits 💛</h1>
+      <p>Découvrez Boutchou Babioles et retrouvez les articles disponibles directement sur Vinted.</p>
+      <a className="button" href={shop} target="_blank" rel="noreferrer">Voir la boutique Vinted</a>
+    </div></section>
+
+    <section className="shopShowcase">
+      <div className="heading">
+        <div><small>NOTRE BOUTIQUE</small><h2>Nos articles sur Vinted</h2></div>
+      </div>
+      <p className="shopIntro">Un aperçu de la boutique Boutchou Babioles. Pour connaître les prix et les disponibilités à jour, ouvrez directement la boutique Vinted.</p>
+      <a className="shopCapture" href={shop} target="_blank" rel="noreferrer" aria-label="Ouvrir la boutique Boutchou Babioles sur Vinted">
+        <img src="/vinted-boutique.jpg" alt="Aperçu de la boutique Vinted Boutchou Babioles"/>
+        <span className="captureCta">Voir les articles sur Vinted →</span>
+      </a>
+      <div className="shopActions">
+        <a className="button" href={shop} target="_blank" rel="noreferrer">Voir tous les articles et disponibilités</a>
+      </div>
+      <p className="captureNote">Les prix et disponibilités peuvent évoluer sur Vinted.</p>
+    </section>
+  </main>
+}

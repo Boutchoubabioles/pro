@@ -1,4 +1,4 @@
-import products from '../../../../data/products.json';
+import products from '../../../data/products.json';
 
 function normalizeTitle(value=''){
   return value

@@ -1,6 +1,5 @@
-TEST IFRAME VINTED
-Remplacer app/page.js et app/style.css.
-Ce test affiche directement l'URL Vinted dans une iframe.
-Si Vinted refuse l'intégration, la zone sera vide ou affichera un message du navigateur/Vinted.
-Le bouton « Ouvrir Vinted » reste disponible.
-Pour revenir en arrière, remettre les deux fichiers du correctif précédent.
+TEST VINTED ?tab=closet
+
+Remplacer uniquement app/page.js dans GitHub.
+Ce test force l'iframe et les boutons Vinted vers l'onglet Annonces du profil avec ?tab=closet.
+Aucun autre fichier n'est modifié.

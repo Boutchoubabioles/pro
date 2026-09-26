@@ -44,17 +44,6 @@
     "vinted_url": "https://www.vinted.fr/items/8123775689"
   },
   {
-    "id": "9734450832",
-    "title": "🚚 Bouteille en plastique 500ML ~ Camions",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-21 22:07:21 +0200",
-    "image": "/products/9734450832.webp",
-    "vinted_url": "https://www.vinted.fr/items/9734450832"
-  },
-  {
     "id": "9957407158",
     "title": "Carte • Jolie Merveille",
     "brand": "lacigognedelily",
@@ -86,17 +75,6 @@
     "created_at": "2026-09-22 19:42:46 +0200",
     "image": "/products/10098887289.webp",
     "vinted_url": "https://www.vinted.fr/items/10098887289"
-  },
-  {
-    "id": "9734698206",
-    "title": "Bouteille en plastique 500ML ~ Chaperon rouge",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-21 22:42:36 +0200",
-    "image": "/products/9734698206.webp",
-    "vinted_url": "https://www.vinted.fr/items/9734698206"
   },
   {
     "id": "9957332263",
@@ -143,28 +121,6 @@
     "vinted_url": "https://www.vinted.fr/items/10077485046"
   },
   {
-    "id": "9669806230",
-    "title": "Sensorielle ~ Ferme en folie 🐑",
-    "brand": "bien comme bébé",
-    "size": "6-9 mois / 68 cm",
-    "condition": "Neuf sans étiquette",
-    "price": "12,3",
-    "created_at": "2026-08-15 17:24:53 +0200",
-    "image": "/products/9669806230.webp",
-    "vinted_url": "https://www.vinted.fr/items/9669806230"
-  },
-  {
-    "id": "9737203431",
-    "title": "Bouteille en plastique 500ML ~ Carrousel",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-22 11:09:14 +0200",
-    "image": "/products/9737203431.webp",
-    "vinted_url": "https://www.vinted.fr/items/9737203431"
-  },
-  {
     "id": "10121949539",
     "title": "🩷 Bavoir à poche récupératrice enduit Etoiles ~ Luna",
     "brand": "lesjuliettes",
@@ -209,17 +165,6 @@
     "vinted_url": "https://www.vinted.fr/items/9737538708"
   },
   {
-    "id": "9737593168",
-    "title": "🍴 Boîte repas ~ Carrousel 🎠",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "10,8",
-    "created_at": "2026-08-22 11:44:35 +0200",
-    "image": "/products/9737593168.webp",
-    "vinted_url": "https://www.vinted.fr/items/9737593168"
-  },
-  {
     "id": "9173619086",
     "title": "🧸 Casquette En Velours Côtelé Beige Avec Ours En Peluche",
     "brand": "Rammelaartje",
@@ -242,17 +187,6 @@
     "vinted_url": "https://www.vinted.fr/items/9737150144"
   },
   {
-    "id": "9738699467",
-    "title": "Trois Boîtes à goûter ~ Avions",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,9",
-    "created_at": "2026-08-22 13:18:59 +0200",
-    "image": "/products/9738699467.webp",
-    "vinted_url": "https://www.vinted.fr/items/9738699467"
-  },
-  {
     "id": "8581257047",
     "title": "🦄 Magic licorne",
     "brand": "bien comme bébé",
@@ -262,17 +196,6 @@
     "created_at": "2026-04-06 16:51:06 +0200",
     "image": "/products/8581257047.webp",
     "vinted_url": "https://www.vinted.fr/items/8581257047"
-  },
-  {
-    "id": "9734503546",
-    "title": "🌸 Bouteille en plastique 500ML ~ Fleurs",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-21 22:14:29 +0200",
-    "image": "/products/9734503546.webp",
-    "vinted_url": "https://www.vinted.fr/items/9734503546"
   },
   {
     "id": "9773169841",
@@ -429,28 +352,6 @@
     "vinted_url": "https://www.vinted.fr/items/9681503499"
   },
   {
-    "id": "9733672770",
-    "title": "🩵 Bouteille en plastique 500ML ~ Avions",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-21 20:36:11 +0200",
-    "image": "/products/9733672770.webp",
-    "vinted_url": "https://www.vinted.fr/items/9733672770"
-  },
-  {
-    "id": "9734271613",
-    "title": "🐷 Bouteille en plastique 500ML ~ Les trois petits cochons",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,99",
-    "created_at": "2026-08-21 21:44:27 +0200",
-    "image": "/products/9734271613.webp",
-    "vinted_url": "https://www.vinted.fr/items/9734271613"
-  },
-  {
     "id": "10077275137",
     "title": "Body bébé Manches Courtes Blanc ~ Taille 6 mois",
     "brand": "Tutete",
@@ -482,17 +383,6 @@
     "created_at": "2026-08-17 16:37:58 +0200",
     "image": "/products/9689669213.webp",
     "vinted_url": "https://www.vinted.fr/items/9689669213"
-  },
-  {
-    "id": "9738745878",
-    "title": "Trois boîtes à goûter ~ Carrousel",
-    "brand": "Tutete",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "8,9",
-    "created_at": "2026-08-22 13:22:53 +0200",
-    "image": "/products/9738745878.webp",
-    "vinted_url": "https://www.vinted.fr/items/9738745878"
   },
   {
     "id": "9805654153",
@@ -636,17 +526,6 @@
     "created_at": "2026-08-29 12:50:08 +0200",
     "image": "/products/9815258302.webp",
     "vinted_url": "https://www.vinted.fr/items/9815258302"
-  },
-  {
-    "id": "9131917627",
-    "title": "🌳 Jeu magnétique - Amusement en forêt",
-    "brand": "Filibabba",
-    "size": "",
-    "condition": "Neuf avec étiquette",
-    "price": "11,0",
-    "created_at": "2026-06-09 19:05:26 +0200",
-    "image": "/products/9131917627.webp",
-    "vinted_url": "https://www.vinted.fr/items/9131917627"
   },
   {
     "id": "9681457848",

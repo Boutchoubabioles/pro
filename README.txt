@@ -1,22 +1,25 @@
-MISE À JOUR PRODUITS / VISIBILITÉ
+MISE À JOUR CATÉGORIES + LOGO
 
-1. Dans Supabase > SQL Editor, exécuter SUPABASE.sql une seule fois.
-2. Dans GitHub, ajouter/remplacer :
+1) Supabase > SQL Editor :
+   exécuter SUPABASE-CATEGORIES.sql une seule fois.
+
+2) GitHub : remplacer/ajouter les fichiers du ZIP en conservant les dossiers :
    app/page.js
+   app/style.css
    app/admin/page.js
-   app/api/products/route.js
-   app/api/product-visibility/route.js
-3. Ouvrir app/style.css actuel et ajouter à la fin le contenu de STYLE-A-AJOUTER.txt.
-   (Le CSS est fourni séparément pour ne pas écraser les réglages visuels récents.)
+   app/components/ProductCatalog.js
+   app/api/categories/route.js
+   app/api/product-categories/route.js
 
-Résultat :
-- retour au catalogue produits local sur la page publique ;
-- Administration > Produits ;
-- case rapide Affiché / Masqué pour chaque article ;
-- filtres Tous / Affichés / Masqués ;
-- recherche nom / marque / ID ;
-- l'état est enregistré dans Supabase et persiste après les déploiements ;
-- masquer ne supprime jamais le produit ;
-- chaque carte publique ouvre l'annonce Vinted correspondante.
+3) Attendre le déploiement Vercel.
 
-La synchronisation automatique Vinted n'est PAS activée : l'API officielle Vinted Pro nécessite un compte allowlisté. Le catalogue existant reste donc protégé contre les échecs/403.
+NOUVEAUTÉS
+- Administration > Catégories : création, modification du nom, visible/masqué, ordre, suppression.
+- Administration > Produits : cases pour associer un article à une ou plusieurs catégories.
+- Site public : boutons de catégories juste au-dessus des premières photos.
+- « Tous » est sélectionné par défaut.
+- Une catégorie masquée disparaît du site sans supprimer ses associations.
+- Le logo est de nouveau plus grand.
+- Boutchou / Babioles sont de nouveau en deux couleurs.
+
+Les réglages Affiché/Masqué des produits existants sont conservés.

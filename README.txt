@@ -1,11 +1,14 @@
-CORRECTIF V2 - ONGLET STATISTIQUES
+CORRECTIF V3 - ONGLET STATISTIQUES
 
-Remplacer les fichiers du ZIP dans GitHub en conservant les dossiers.
+Cette version corrige la cause : le composant précédent cherchait la barre d'onglets
+avant qu'elle n'existe à l'écran, puis abandonnait.
 
-Ce correctif :
-- ajoute réellement « Statistiques » à la barre des onglets de l'administration ;
-- le place après « Réseaux sociaux » ;
-- ne remet pas le bouton en bas ;
-- conserve la disparition automatique des confirmations.
+Remplacer/ajouter uniquement :
+- app/admin/AdminStatsTab.js
+- app/admin/stats-tab.css
 
+Ne supprimez aucun autre fichier.
 Aucun SQL à exécuter.
+
+L'onglet « Statistiques » sera ajouté dès que la barre d'administration apparaît,
+juste après « Réseaux sociaux ».

@@ -1,6 +1,7 @@
 import AdminInstallButton from './AdminInstallButton';
 import AdminEnhancements from './AdminEnhancements';
 import AdminStatsTab from './AdminStatsTab';
+import ProductUiSafe from './ProductUiSafe';
 
 export const metadata={
   title:'Administration · BoutchouBabioles',
@@ -8,5 +9,5 @@ export const metadata={
 };
 
 export default function AdminLayout({children}){
-  return <><AdminStatsTab/>{children}<AdminEnhancements/><AdminInstallButton/></>;
+  return <><AdminStatsTab/><ProductUiSafe/>{children}<AdminEnhancements/><AdminInstallButton/></>;
 }

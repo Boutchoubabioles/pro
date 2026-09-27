@@ -1,15 +1,15 @@
-MISE À JOUR - LISTE PRODUITS PLUS COMPACTE + ANNULER
+CORRECTIF URGENT - ADMIN FIGÉE
 
-Remplacer/ajouter les fichiers du ZIP dans GitHub en conservant les dossiers.
+Le dernier composant d'amélioration de la liste Produits provoquait une boucle
+MutationObserver et bloquait l'affichage des produits.
 
-Modifications :
-- Dans la liste Produits, les cases de toutes les catégories ne sont plus affichées.
-- À la place : « Aucune catégorie », « 1 catégorie », « X catégories ».
-- Les catégories restent sélectionnables dans la fiche Modifier/Ajouter un article.
-- Ajout d'un bouton « Annuler » dans la fiche article.
-- « Annuler » revient à la liste sans enregistrer les modifications.
-- Le bouton Supprimer l'article reste séparé en rouge.
-- Fonctionne aussi lors de l'ajout d'un nouvel article.
-- Le correctif Statistiques déjà en place est conservé.
+Ce correctif le désactive immédiatement.
+
+Remplacer uniquement :
+app/admin/layout.js
 
 Aucun SQL à exécuter.
+Après le déploiement Vercel, fermer puis rouvrir l'application si nécessaire.
+
+Les produits et leurs données ne sont pas supprimés : le problème concernait
+uniquement l'affichage de l'administration.

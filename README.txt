@@ -1,8 +1,19 @@
-CORRECTIF PWA ADMIN V2
-- Envoyer les fichiers sur GitHub en conservant les dossiers.
-- Attendre Vercel.
-- Désinstaller l'ancienne application.
-- Ouvrir /admin puis utiliser le bouton d'installation Admin.
-Le public ne déclare plus le manifeste PWA. /admin utilise le manifeste avec démarrage /admin.
-Le menu mobile affiche Boutique + À propos.
-Note : Chrome peut malgré tout afficher « Installer et créer un raccourci » dans son propre menu pour n'importe quel site. Le site ne peut pas masquer une commande appartenant à Chrome.
+MISE À JOUR STATISTIQUES + MESSAGES
+
+AVANT D'ENVOYER LES FICHIERS :
+1. Ouvrir Supabase > SQL Editor.
+2. Exécuter le contenu de sql/SUPABASE-STATISTIQUES.sql.
+3. Ensuite seulement, envoyer les autres fichiers du ZIP sur GitHub en conservant les dossiers.
+4. Attendre le déploiement Vercel.
+
+Ajouts :
+- statistiques des visites (1 fois par session de navigation) ;
+- clics vers la boutique Vinted complète ;
+- clics par article et classement ;
+- activité récente ;
+- bouton de réinitialisation avec confirmation ;
+- lien « Statistiques » dans l'administration ;
+- confirmations réussies masquées automatiquement après environ 2 secondes ;
+- les erreurs restent affichées.
+
+Les statistiques commencent à zéro à partir de l'installation de cette mise à jour.

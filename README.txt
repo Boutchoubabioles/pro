@@ -1,19 +1,14 @@
-MISE À JOUR SÛRE - PRODUITS COMPACTS + ANNULER
+CORRECTIF BOUTON ANNULER
 
-Cette version ne réutilise PAS le MutationObserver qui avait figé l'administration.
+Remplacer uniquement :
+- app/admin/ProductUiSafe.js
+- app/admin/product-ui-safe.css
 
-Ajouts :
-- Les cases des catégories disparaissent de la liste générale des produits.
-- À leur place : « Aucune catégorie », « 1 catégorie », « X catégories ».
-- Les cases restent disponibles dans Modifier/Ajouter un article.
-- Dans la fiche article, le bouton existant « Retour aux produits » devient « Annuler ».
-  Il utilise donc directement la fonction React déjà existante et ne sauvegarde rien.
-- Aucun changement des données Supabase.
-- Statistiques et autres fonctions conservées.
-
-Fichiers à ajouter/remplacer :
-app/admin/ProductUiSafe.js
-app/admin/product-ui-safe.css
-app/admin/layout.js
+Résultat :
+- Enregistrer + Annuler sur la même ligne sur mobile.
+- Supprimer l'article reste en dessous en rouge.
+- Annuler revient à la liste des produits sans enregistrer.
+- Fonctionne aussi lors de l'ajout d'un nouvel article.
+- Le résumé « X catégories » est conservé.
 
 Aucun SQL à exécuter.

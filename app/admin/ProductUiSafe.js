@@ -4,9 +4,7 @@ import './product-ui-safe.css';
 
 export default function ProductUiSafe(){
  useEffect(()=>{
-  let lastForm=null;
   const timer=setInterval(()=>{
-   // Résumé catégories dans la liste, sans MutationObserver.
    document.querySelectorAll('.productAdminRow').forEach(row=>{
     const box=row.querySelector('.productCats');
     if(!box)return;
@@ -21,17 +19,21 @@ export default function ProductUiSafe(){
     if(summary.textContent!==label)summary.textContent=label;
    });
 
-   // Utilise le bouton React existant « Retour aux produits » comme vrai bouton Annuler.
    const form=document.querySelector('.productForm');
-   if(form&&form!==lastForm){
-    const back=form.querySelector('.backBtn');
-    if(back){
-      back.textContent='Annuler';
-      back.classList.add('cancelTopSafe');
-    }
-    lastForm=form;
+   const actions=form?.querySelector('.formActions');
+   if(form&&actions&&!actions.querySelector('.cancelProductSafe')){
+    const cancel=document.createElement('button');
+    cancel.type='button';
+    cancel.className='cancelProductSafe';
+    cancel.textContent='Annuler';
+    cancel.addEventListener('click',()=>{
+      const back=form.querySelector('.backBtn');
+      if(back)back.click();
+    });
+    const danger=actions.querySelector('.dangerBtn');
+    if(danger)actions.insertBefore(cancel,danger);
+    else actions.appendChild(cancel);
    }
-   if(!form)lastForm=null;
   },400);
   return()=>clearInterval(timer);
  },[]);

@@ -1,22 +1,12 @@
-MISE À JOUR — GESTION COMPLÈTE DES PRODUITS
+MISE À JOUR PWA ADMIN — BOUTCHOUBABIOLES
 
-1. Dans Supabase > SQL Editor, exécuter SUPABASE-PRODUITS.sql UNE SEULE FOIS.
-   Il crée la table products et importe les 57 produits nettoyés (sans les doublons retirés).
+Modifications :
+- Suppression du lien Administration dans le menu public.
+- Boutique + À propos restent visibles sur mobile.
+- La PWA est proposée uniquement dans /admin.
+- Bouton discret « Installer l’application Admin » en bas de l’administration.
+- L’application démarre directement sur /admin.
+- Nom de l’application : « BoutchouBabioles Admin ».
 
-2. Ensuite, copier dans GitHub les dossiers app et data du ZIP en conservant l'arborescence.
-   Vercel redéploiera automatiquement.
-
-Nouveautés :
-- bouton + Ajouter un article
-- photo obligatoire avec envoi dans Supabase Storage
-- nom, marque, taille, état, prix, lien Vinted
-- affiché/masqué
-- catégories multiples
-- bouton Modifier sur chaque article
-- bouton Supprimer l'article dans la fiche
-- confirmation avant suppression
-- contrôle des doublons même si l'article existant est masqué
-- possibilité d'ajouter quand même après avertissement
-- catalogue désormais géré dans Supabase, donc persistant après déploiement
-
-IMPORTANT : exécuter le SQL AVANT d'envoyer les fichiers sur GitHub.
+IMPORTANT APRÈS DÉPLOIEMENT :
+Si l’ancienne application est déjà installée sur le téléphone, désinstallez-la puis ouvrez /admin dans le navigateur et réinstallez-la afin que le nouveau start_url et le nouveau nom soient pris en compte.
